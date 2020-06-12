@@ -10,9 +10,8 @@ const validate = (secret) => (req, res, next) => {
 
   // call next with an error if no token present
   if (!token) {
-    const err = new Error('bad request - no token provided in body');
-    err.status = 400;
-    return next(err);
+    req.hcaptcha = false;
+    next();
   }
 
   // verify the hcaptcha and continue on success

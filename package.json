@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "A light middleware for Express.js to verify the hCaptcha token",
   "main": "index.js",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vastus/express-hcaptcha.git"

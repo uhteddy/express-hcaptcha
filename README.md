@@ -1,18 +1,17 @@
-# express-hcaptcha
+# hcaptcha.js
 
 Validate your hCaptcha token using a middleware.
 
 ## Usage
 
 ```
-npm install --save express-hcaptcha
+npm i hcaptcha.js --save
 ```
 
 ```js
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const express = require('express');
-const hcaptcha = require('express-hcaptcha');
+const hcaptcha = require('hcaptcha.js');
 
 // your hcaptcha secret key
 const SECRET = process.env.HCAPTCHA_SECRET_KEY;
@@ -21,21 +20,19 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 // middleware
-app.use(cors());
 app.use(bodyParser.json()); // required by express-hcaptcha
 
 // validate the token and proceed to the route when token is valid
 // the middleware also sets the req.hcaptcha to what ever the verify call returns
 app.post('/verify', hcaptcha.middleware.validate(SECRET), (req, res) => {
-  res.json({message: 'verified!', hcaptcha: req.hcaptcha});
+  if (req.hcaptcha) {
+    // Captcha was successful
+  } else {
+    // Captcha was not filled out.
+  }
 });
 
 app.listen(PORT, () => {
   console.log(`listening on http://0.0.0.0:${PORT}`);
 });
 ```
-
-## Todo
-
-- [x] tests
-- [ ] setup CI
