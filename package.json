@@ -1,6 +1,6 @@
 {
   "name": "hcaptcha.js",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "A light middleware for Express.js to verify the hCaptcha token",
   "main": "index.js",
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
