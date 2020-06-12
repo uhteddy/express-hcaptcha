@@ -6,7 +6,7 @@
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vastus/express-hcaptcha.git"
+    "url": "git+https://github.com/uhteddy/hcaptcha.js.git"
   },
   "keywords": [
     "hcaptcha",
@@ -15,9 +15,9 @@
   "author": "Juho Hautala <juho.hautala@iki.fi>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vastus/express-hcaptcha/issues"
+    "url": "https://github.com/uhteddy/hcaptcha.js/issues"
   },
-  "homepage": "https://github.com/vastus/express-hcaptcha#readme",
+  "homepage": "https://github.com/uhteddy/hcaptcha.js#readme",
   "scripts": {
     "test": "mocha"
   },
